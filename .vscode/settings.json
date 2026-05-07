@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "PS1.6_TempServer/src",
+        "PS1.9_CompareString/src",
+        "PS2.1_MPISum/src",
+        "PS2.3_MPIAvg"
+    ],
+    "java.project.referencedLibraries": [
+        "/Users/shreeyadaga/mpj/lib/mpj.jar"
+    ]
+}
