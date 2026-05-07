@@ -1,0 +1,17 @@
+{
+    "java.project.sourcePaths": [
+        "PS1.1/src",
+        "PS1.11",
+        "PS1.6",
+        "PS1.9",
+        "PS4.1",
+        "PS4.2",
+        "PS56.4",
+        "PS6.1",
+        "PS7.1"
+    ],
+    "java.project.referencedLibraries": [
+        "shravani_mpi/lib/mpj.jar",
+        "/Users/shreeyadaga/mpj/lib/mpi.jar"
+    ]
+}
