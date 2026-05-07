@@ -1,0 +1,16 @@
+Terminal 1
+cd to src
+Idlj -fall Reverse.idl → CHECK -> (Reverse Module folder created)
+javac ReverseModule/*.java *.java  
+
+Terminal 2
+cd src
+orbd -ORBInitialPort 1050 -ORBInitialHost localhost   
+
+Terminal 3
+cd src
+java ReverseServer -ORBInitialPort 1050 -ORBInitialHost localhost
+
+Terminal 4
+cd src
+java ReverseClient -ORBInitialPort 1050 -ORBInitialHost localhost

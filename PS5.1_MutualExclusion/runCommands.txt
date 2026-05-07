@@ -1,0 +1,2 @@
+javac mutual.java
+java mutual

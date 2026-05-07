@@ -1,0 +1,19 @@
+Terminal 1 →
+cd /src
+javac *.java
+rmiregistry
+
+Terminal 2 →
+cd src
+java VowelServer
+
+Terminal 3 →
+cd src
+java VowelClient 127.0.0.1
+        # 127.0.0.1 → local host IP, if on different machines, then put the IP of that machine
+
+
+If some error comes up 
+After fixing it →
+rm *.class
+javac *.java

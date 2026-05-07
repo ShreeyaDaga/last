@@ -1,0 +1,16 @@
+Terminal 1
+cd to src
+Idlj -fall Uppercase.idl → CHECK -> (Reverse Module folder created)
+javac UppercaseModule/*.java *.java  
+
+Terminal 2
+cd src
+orbd -ORBInitialPort 1050 -ORBInitialHost localhost   
+
+Terminal 3
+cd src
+java UppercaseServer -ORBInitialPort 1050 -ORBInitialHost localhost
+
+Terminal 4
+cd src
+java UppercaseClient -ORBInitialPort 1050 -ORBInitialHost localhost

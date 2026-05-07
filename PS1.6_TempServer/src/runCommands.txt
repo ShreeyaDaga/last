@@ -1,0 +1,19 @@
+Terminal 1 →
+cd /src
+javac *.java
+rmiregistry
+
+Terminal 2 →
+cd src
+java TempServer
+
+Terminal 3 →
+cd src
+java TempClient 127.0.0.1 0
+        # 127.0.0.1 → local host IP, if on different machines, then put the IP of that machine
+
+
+If some error comes up 
+After fixing it →
+rm *.class
+javac *.java

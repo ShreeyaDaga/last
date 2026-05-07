@@ -14,7 +14,7 @@ import java.util.Scanner;
 11. forward data till temp != receiver
 12. receiver gets data --> exit critical section --> pass token to next process
 */
-public class mutual2 {
+public class mutual {
 
     public static void main(String[] args) {
 

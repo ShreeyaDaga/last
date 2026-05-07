@@ -1,0 +1,7 @@
+Terminal 1
+javac *.java
+java Master
+
+
+Terminal 2 
+java Slave

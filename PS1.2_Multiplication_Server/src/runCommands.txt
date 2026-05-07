@@ -1,0 +1,20 @@
+Terminal 1 →
+cd /src
+javac *.java
+rmiregistry
+
+Terminal 2 →
+cd src
+java MultiplyServer
+
+Terminal 3 →
+cd src
+java MultiplyClient 127.0.0.1 7 8
+        # 127.0.0.1 → local host IP, if on different machines, then put the IP of that machine
+        # 7 8 → first and second number
+
+
+If some error comes up 
+After fixing it →
+rm *.class
+javac *.java

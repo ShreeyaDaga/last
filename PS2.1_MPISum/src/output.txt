@@ -1,7 +1,0 @@
-MPJ Express (0.44) is started in the multicore configuration
-[Root] Array created with 2 elements:
-  array[0] = 10  array[1] = 20
-[Root] Scattering one element to each process...
-  [Process 1] Received: 20  -->  Local sum = 20
-  [Process 0] Received: 10  -->  Local sum = 10
-[Root] Total sum of all elements = 30

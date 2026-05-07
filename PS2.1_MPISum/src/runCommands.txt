@@ -1,0 +1,10 @@
+MPJ in Project folder --> 
+Control + Shift + P 
+Search  -  Java: Configure ClassPath
+Add source path as your folder
+Add Library - mpj.jar file from mpj/lib/mpj.jar
+Click - Apply Settings
+
+cd src
+javac -cp ~/Path/to/mpj.jar MPISum.java  
+mpjrun.sh -np 4 MPISum

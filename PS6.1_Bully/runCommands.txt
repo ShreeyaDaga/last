@@ -1,0 +1,2 @@
+javac BullyAlgo.java
+java BullyAlgo
