@@ -18,3 +18,51 @@ If some error comes up
 After fixing it →
 rm *.class
 javac *.java
+
+
+
+IF PACKAGE ISSUE OF RMI: 
+
+java -version
+javac -version
+
+OUTPUT SHOULD BE - 
+openjdk version "1.8.0_xxx"
+javac 1.8.0_xxx
+
+
+CHECK IF RMI EXISTS - 
+jar tf $(dirname $(readlink -f $(which javac)))/../jre/lib/rt.jar | grep java/rmi
+
+OUTPUT - If many files appear, RMI is present correctly.
+
+
+CHECK VS CODE - 
+
+Press:
+Ctrl + Shift + P
+
+Search:   Java: Configure Java Runtime
+
+Under Installed JDKs, make sure it points to Java 8.
+Example path:  /usr/lib/jvm/java-8-openjdk-amd64
+
+If not present, add it.
+
+
+
+
+SET JAVA_HOME PROPERLY
+
+Open terminal:
+nano ~/.bashrc
+
+Add at bottom:
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+
+Save and run:
+source ~/.bashrc
+
+Verify:
+echo $JAVA_HOME
