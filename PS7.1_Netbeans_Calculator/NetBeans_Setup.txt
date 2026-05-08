@@ -1,0 +1,45 @@
+1. In NetBeans GUI:
+
+File → New Project → Java EE → Web Application → Next
+  Project Name : CalculatorWebServiceApp
+  Server       : GlassFish Server → Finish
+
+Right-click Source Packages → New → Web Service
+  Web Service Name : CalculatorWebService
+  Package          : org.calculator.service
+  ✅ Check: Stateless Session Bean → Finish
+
+
+2. Paste CalculatorWebService.java
+
+
+3. In NetBeans:
+Right-click CalculatorWebServiceApp → Deploy
+
+4. Verify in browser — if you see XML it works:
+http://localhost:8080/CalculatorWebServiceApp/CalculatorWebService?wsdl
+
+5. In NetBeans:
+File → New Project → Java → Java Application
+  Project Name : CalculatorClientApp → Finish
+
+Right-click CalculatorClientApp → New → Web Service Client
+  WSDL URL : http://localhost:8080/CalculatorWebServiceApp/CalculatorWebService?wsdl
+  Package  : org.calculator.service → Finish
+  (wait for NetBeans to auto-generate stub classes)
+
+6. Create CalculatorClient.java and paste
+
+7. In NetBeans: 
+Right-click CalculatorClientApp → Run
+
+Expected console output:
+
+===== Calculator Web Service =====
+a = 20.0, b = 5.0
+----------------------------------
+Add : 25.0
+Subtract : 15.0
+Multiply : 100.0
+Divide : 4.0
+Divide/0 : Error - Division by zero not allowed!

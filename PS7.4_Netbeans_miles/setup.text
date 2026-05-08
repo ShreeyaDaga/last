@@ -1,0 +1,49 @@
+1. In NetBeans GUI:
+
+File → New Project → Java EE → Web Application → Next
+  Project Name : MilesConverterWebServiceApp
+  Server       : GlassFish Server → Finish
+
+Right-click Source Packages → New → Web Service
+  Web Service Name : MilesConverterWebService
+  Package          : org.miles.service
+  ✅ Check: Stateless Session Bean → Finish
+
+
+2. Paste MilesConverterWebService.java
+
+
+3. In NetBeans:
+Right-click MilesConverterWebServiceApp → Deploy
+
+
+4. Verify in browser — must show WSDL XML:
+http://localhost:8080/MilesConverterWebServiceApp/MilesConverterWebService?wsdl
+
+
+5. In NetBeans:
+File → New Project → Java → Java Application
+  Project Name : MilesConverterClientApp → Finish
+
+Right-click MilesConverterClientApp → New → Web Service Client
+  WSDL URL : http://localhost:8080/MilesConverterWebServiceApp/MilesConverterWebService?wsdl
+  Package  : org.miles.service → Finish
+  (wait for NetBeans to auto-generate stubs)
+
+
+6. Create MilesConverterClient.java and paste
+
+
+7. Run the Client
+In NetBeans:
+Right-click MilesConverterClientApp → Run
+
+
+Expected console output:
+
+===== Miles to Kilometer Converter =====
+1.0 miles = 1.60934 km
+5.0 miles = 8.0467 km
+10.0 miles = 16.0934 km
+50.0 miles = 80.467 km
+100.0 miles = 160.934 km

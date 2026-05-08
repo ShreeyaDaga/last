@@ -1,0 +1,48 @@
+1. In NetBeans GUI:
+
+File → New Project → Java EE → Web Application → Next
+  Project Name : HelloWebServiceApp
+  Server       : GlassFish Server → Finish
+
+Right-click Source Packages → New → Web Service
+  Web Service Name : HelloWebService
+  Package          : org.hello.service
+  ✅ Check: Stateless Session Bean → Finish
+
+
+2. Paste HelloWebService.java
+
+
+3. In NetBeans:
+Right-click HelloWebServiceApp → Deploy
+
+
+4. Verify in browser — must show WSDL XML:
+http://localhost:8080/HelloWebServiceApp/HelloWebService?wsdl
+
+
+5. Create Client Project (Consumer)
+In NetBeans:
+
+File → New Project → Java → Java Application
+  Project Name : HelloClientApp → Finish
+
+Right-click HelloClientApp → New → Web Service Client
+  WSDL URL : http://localhost:8080/HelloWebServiceApp/HelloWebService?wsdl
+  Package  : org.hello.service → Finish
+  (wait for NetBeans to generate stubs automatically)
+
+
+6. Create HelloClient.java and paste
+
+7. Run the Client
+In NetBeans:
+Right-click HelloClientApp → Run
+
+
+Expected console output:
+
+===== Hello Web Service =====
+Hello Alice
+Hello Bob
+Hello PICT
