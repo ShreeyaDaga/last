@@ -1,0 +1,58 @@
+1. Do this inside NetBeans GUI — no terminal needed.
+
+File → New Project → Java EE → Web Application → Next
+  Project Name : SIWebServiceApp
+  Server       : GlassFish Server
+  → Finish
+
+Right-click Source Packages → New → Web Service
+  Web Service Name : SIWebService
+  Package          : org.si.calculator
+  ✅ Check: Stateless Session Bean
+  → Finish
+
+
+
+
+2. Paste code - SIWebService.java:
+
+
+
+Deploy the Web Service
+In NetBeans:
+ Right-click SIWebServiceApp → Deploy
+ (GlassFish starts automatically)
+
+Verify it works — open browser and go to:
+http://localhost:8080/SIWebServiceApp/SIWebService?wsdl
+
+
+
+
+Create Client Project (Consumer) --
+File → New Project → Java → Java Application
+  Project Name : SIClientApplication
+  → Finish
+
+Right-click SIClientApplication → New → Web Service Client
+  WSDL URL : http://localhost:8080/SIWebServiceApp/SIWebService?wsdl
+  Package  : org.si.calculator
+  → Finish
+(NetBeans auto-generates stub classes — wait for it to finish)
+
+
+
+Create a new class SIClient.java and paste:
+
+
+
+
+Run the Client
+In NetBeans:
+Right-click SIClientApplication → Run
+
+Expected console output:
+Principal : Rs. 10000.0
+Rate : 5.0%
+Time : 3.0 years
+SI : Rs. 1500.0
